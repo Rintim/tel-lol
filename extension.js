@@ -1,3 +1,4 @@
+"use strict";
 game.import("extension", (lib, game, ui, get, ai, _status) => {
 	return {
 		name: "英雄联盟扩展",

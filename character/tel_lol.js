@@ -4,6 +4,8 @@ game.import("character", (lib, game, ui, get, ai, _status) => {
 	 * @type {importCharacterConfig}
 	 */
 	const TEL_LOL = {
+		name: "tel_lol",
+		connect: true,
 		character: {
 			"lol_yingmo": ["none", "tel_lol_mo", 6, ["lol_yingsha", "lol_heiying", "lol_anjie", "lol_juxi"], []],
 			"lol_yanmo": ["none", "tel_lol_mo", 6, ["lol_zhishen", "lol_yanzai", "lol_zhuoshao", "lol_juxi"], []],
@@ -14,7 +16,7 @@ game.import("character", (lib, game, ui, get, ai, _status) => {
 			"lol_woliber": ["male", "tel_lol_han", 4, ["lol_jinglei", "lol_tiansheng", "lol_pili", "lol_cedian"], []],
 			"lol_taidamier": ["male", "tel_lol_han", 4, ["lol_manli", "lol_buqu"], []],
 			"lol_youmi": ["female", "tel_lol_yue", 2, ["lol_yifu", "lol_feidan", "lol_modian", "lol_mizhang"], []],
-			"lolkz_bulong": ["male", "tel_lol_han", 4, ["lol_jiandun", "lol_tingshen"]],
+			"lolkz_bulong": ["male", "tel_lol_han", 4, ["lol_jiandun", "lol_tingshen"], []],
 			"lolkz_glfs": ["male", "tel_lol_gang", 3, ["lol_zhuangdan", "lol_mingyun"], ["des:马尔科姆•格雷福斯是有名的佣兵、赌徒和窃贼，凡是他到过的城邦或帝国，都在通缉悬赏他的人头。虽然他脾气暴躁，但却讲究黑道的义气，他的双管霰弹枪“命运”就经常用来纠正背信弃义之事。几年前他和老搭档崔斯特•菲特冰释前嫌，如今二人一同在比尔吉沃特的地下黑道纷争中再次如鱼得水。 <br><br> “我们只谋财，不害命……都老实点，不用你逞英雄。” <br><br> ~ 格雷福斯"]],
 			"lol_boss_foyege": ["male", "tel_lol_you", 5, ["lol_pobai", "lol_boss_guanhun", "lol_jueming", "lol_boss_youzhou"], ["boss", "bossallowed", "unseen", "forbidai"]],
 			"lol_foyege": ["male", "tel_lol_you", "3/4", ["lol_pobai", "lol_guanhun", "lol_jueming", "lol_youzhou"], ["zhu"]],
@@ -9835,7 +9837,7 @@ game.import("character", (lib, game, ui, get, ai, _status) => {
 							globalFrom: function () {
 								return -7;
 							},
-							globalTo: function (_, _, num) {
+							globalTo: function (_from, _to, num) {
 								return num + 2;
 							},
 						},

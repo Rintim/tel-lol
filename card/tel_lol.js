@@ -4,6 +4,8 @@ game.import("card", (lib, game, ui, get, ai, _status) => {
 	 * @type {importCardConfig}
 	 */
 	const TEL_LOL = {
+		name:"tel_lol",
+		connect:true,
 		card: {
 			"lol_xinmy": {
 				derivation: "lolkz_glfs",
